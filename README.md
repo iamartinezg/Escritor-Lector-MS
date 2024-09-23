@@ -83,11 +83,11 @@ La respuesta contiene una lista de mensajes en formato XML:
     <!-- Más mensajes aquí -->
 </mensajes>
 ```
-#####Códigos de Respuesta:
+##### Códigos de Respuesta:
 200 OK: La solicitud se completó exitosamente y se devuelve la lista de mensajes.
 500 Internal Server Error: Error en el servidor o en la base de datos.
 
-###Notas Adicionales
+### Notas Adicionales
 Ambos endpoints utilizan y devuelven datos en formato XML. Asegúrate de enviar el Content-Type: application/xml en las solicitudes POST.
 Las respuestas de error también se formatean en XML para mantener la coherencia con el resto del servicio.
 El trigger en la base de datos asegura que cualquier mensaje insertado en la tabla escritura se copie automáticamente en la tabla lectura. No necesitas preocuparte por sincronizar manualmente las tablas.
