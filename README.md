@@ -63,10 +63,10 @@ Si la inserción es exitosa, se devuelve la siguiente respuesta en formato XML:
 500 Internal Server Error: Error en el servidor o en la base de datos.
 
 ### 2. Servicio de Lectura
-URL: /obtener_mensajes
-Método: GET
-Descripción: Este endpoint devuelve todos los mensajes almacenados en la tabla lectura en formato XML. Cada mensaje incluye su id, texto y fecha_hora de inserción.
-Ejemplo de Respuesta
+- **URL:** /obtener_mensajes
+- **Método:** GET
+- **Descripción:** Este endpoint devuelve todos los mensajes almacenados en la tabla lectura en formato XML. Cada mensaje incluye su id, texto y fecha_hora de inserción.
+#### Ejemplo de Respuesta
 La respuesta contiene una lista de mensajes en formato XML:
 ```xml
 <mensajes>
