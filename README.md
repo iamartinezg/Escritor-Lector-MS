@@ -34,8 +34,8 @@ DB_HOST = <host_de_tu_base_de_datos>
 DB_USER = <usuario_de_tu_base_de_datos>
 DB_PASSWORD = <contraseña_de_tu_base_de_datos>
 DB_NAME = <nombre_de_tu_base_de_datos>
-
-##Endpoints
+bash´´´
+## Endpoints
 ### 1. Servicio de Inserción
 - **URL:** `/guardar_xml`
 - **Método:** `POST`
@@ -50,18 +50,18 @@ La petición debe contener un cuerpo en formato XML como el siguiente:
     <texto>Mensaje de prueba</texto>
 </root>
 
-####Ejemplo de Respuesta
+#### Ejemplo de Respuesta
 Si la inserción es exitosa, se devuelve la siguiente respuesta en formato XML:
 ```xml
 <respuesta>
     <mensaje>Datos guardados exitosamente</mensaje>
 </respuesta>
-#####Códigos de Respuesta:
+##### Códigos de Respuesta:
 201 Created: La solicitud se completó y el recurso se creó exitosamente.
 400 Bad Request: La solicitud no es válida. Esto puede ocurrir si el cuerpo del XML está mal formado o falta el campo texto.
 500 Internal Server Error: Error en el servidor o en la base de datos.
 
-###2. Servicio de Lectura
+### 2. Servicio de Lectura
 URL: /obtener_mensajes
 Método: GET
 Descripción: Este endpoint devuelve todos los mensajes almacenados en la tabla lectura en formato XML. Cada mensaje incluye su id, texto y fecha_hora de inserción.
