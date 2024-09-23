@@ -1,5 +1,4 @@
 # Escritor-Lector-MS
-# Mi Proyecto Flask con Base de Datos MySQL
 
 Este proyecto es una aplicación basada en Flask que proporciona dos microservicios para interactuar con una base de datos MySQL. La base de datos consta de dos tablas: `escritura` y `lectura`. La aplicación incluye funcionalidades para insertar datos y recuperarlos en formato XML.
 
