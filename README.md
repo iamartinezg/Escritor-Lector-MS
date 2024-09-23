@@ -9,7 +9,6 @@ Este proyecto es una aplicación basada en Flask que proporciona dos microservic
 - [Requisitos](#requisitos)
 - [Configuración](#configuración)
 - [Ejecución Local](#ejecución-local)
-- [Despliegue en Render](#despliegue-en-render)
 - [Endpoints](#endpoints)
 - [Base de Datos](#base-de-datos)
 
