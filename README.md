@@ -37,7 +37,7 @@ DB_NAME = <nombre_de_tu_base_de_datos>
 ```
 ## Endpoints
 ### 1. Servicio de Inserción
-- **URL:** `/guardar_xml`
+- **URL:** `/escribir`
 - **Método:** `POST`
 - **Content-Type:** `application/xml`
 - **Descripción:** Este endpoint permite insertar un mensaje en la tabla `escritura`. El mensaje se replicará automáticamente en la tabla `lectura` mediante un trigger.
