@@ -34,7 +34,7 @@ DB_HOST = <host_de_tu_base_de_datos>
 DB_USER = <usuario_de_tu_base_de_datos>
 DB_PASSWORD = <contraseña_de_tu_base_de_datos>
 DB_NAME = <nombre_de_tu_base_de_datos>
-bash´´´
+```
 ## Endpoints
 ### 1. Servicio de Inserción
 - **URL:** `/guardar_xml`
@@ -49,13 +49,14 @@ La petición debe contener un cuerpo en formato XML como el siguiente:
 <root>
     <texto>Mensaje de prueba</texto>
 </root>
-
+```
 #### Ejemplo de Respuesta
 Si la inserción es exitosa, se devuelve la siguiente respuesta en formato XML:
 ```xml
 <respuesta>
     <mensaje>Datos guardados exitosamente</mensaje>
 </respuesta>
+```
 ##### Códigos de Respuesta:
 201 Created: La solicitud se completó y el recurso se creó exitosamente.
 400 Bad Request: La solicitud no es válida. Esto puede ocurrir si el cuerpo del XML está mal formado o falta el campo texto.
@@ -81,6 +82,7 @@ La respuesta contiene una lista de mensajes en formato XML:
     </mensaje>
     <!-- Más mensajes aquí -->
 </mensajes>
+```
 #####Códigos de Respuesta:
 200 OK: La solicitud se completó exitosamente y se devuelve la lista de mensajes.
 500 Internal Server Error: Error en el servidor o en la base de datos.
