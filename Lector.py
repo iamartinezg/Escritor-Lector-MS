@@ -1,8 +1,10 @@
 from flask import Flask, Response
+from flask_cors import CORS
 import mysql.connector
 import xml.etree.ElementTree as ET
 
 app = Flask(__name__)
+CORS(app)
 
 # Configuración de la base de datos
 db_config = {
@@ -55,4 +57,4 @@ def obtener_mensajes():
         return Response(f'<error>Error inesperado: {e}</error>', mimetype='application/xml'), 500
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    app.run(debug=True, port=5002)
