@@ -9,9 +9,7 @@ Este proyecto es una aplicación que consta de un frontend desarrollado en Gatsb
 - [Configuración del Frontend](#configuración-del-frontend)
 - [Ejecución del Frontend](#ejecución-del-frontend)
 - [Endpoints del Backend](#endpoints-del-backend)
-- [Despliegue](#despliegue)
-- [Estructura del Proyecto](#estructura-del-proyecto)
-
+  
 ## Descripción
 
 El proyecto consta de las siguientes partes:
@@ -121,20 +119,4 @@ Despliegue
 Despliegue en Render
 Subir el Repositorio a GitHub: Asegúrate de que el repositorio contenga tanto el frontend como los microservicios.
 
-#### Configurar el Backend en Render:
 
-Crea servicios web para cada microservicio Flask y una base de datos MySQL.
-Configura las variables de entorno para la conexión a la base de datos.
-Configurar el Frontend en Render:
-
-Crea un servicio web para el frontend Gatsby.
-Configura las variables de entorno necesarias (GATSBY_API_ESCRITURA y GATSBY_API_LECTURA) con las URLs de los microservicios.
-Desplegar el Frontend y el Backend:
-
-Una vez configurados los servicios, despliega el frontend y verifica que todas las integraciones funcionen correctamente.
-Estructura del Proyecto
-El proyecto completo incluye:
-
-Frontend (Gatsby): Directorio gatsby-escritor-lector.
-Microservicios (Flask): Directorios escritor y lector con sus respectivos archivos escritor.py y lector.py.
-Base de Datos (MySQL): Contiene las tablas escritura y lectura para almacenar y leer mensajes.
