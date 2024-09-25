@@ -83,11 +83,13 @@ gatsby-escritor-lector/
 ├── .gitignore
 └── .env
 ```
+```
 src/pages/: Contiene las páginas principales (enviar-mensaje.js, mensajes.js y index.js).
 src/components/: Contiene los componentes reutilizables del frontend como header.js, layout.js y seo.js.
 gatsby-config.js: Configuración de Gatsby y plugins utilizados.
 gatsby-browser.js: Configuración global, como el envoltorio del componente de navegación.
-.env: Variables de entorno para la configuración del frontend.
+```
+
 ### Ejecución del Frontend
 Iniciar el Servidor de Desarrollo:
 
