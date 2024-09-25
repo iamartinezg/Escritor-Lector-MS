@@ -107,7 +107,7 @@ Página de Enviar Mensaje: Navega a http://localhost:8000/enviar-mensaje para en
 Página de Ver Mensajes: Navega a http://localhost:8000/mensajes para ver los mensajes almacenados.
 ## Endpoints del Backend
 ### 1. Servicio de Inserción
-URL: /guardar_xml
+URL: /escribir
 Método: POST
 Content-Type: application/xml
 Descripción: Inserta un mensaje en la tabla escritura y lo replica en la tabla lectura.
