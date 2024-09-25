@@ -62,7 +62,7 @@ GATSBY_API_ESCRITURA=http://localhost:5001/guardar_xml
 GATSBY_API_LECTURA=http://localhost:5002/obtener_mensajes
 ```
 ### 3. Estructura de Carpetas del Frontend
-
+```
 gatsby-escritor-lector/
 ├── src/
 │   ├── components/
@@ -82,6 +82,7 @@ gatsby-escritor-lector/
 ├── package.json
 ├── .gitignore
 └── .env
+```
 src/pages/: Contiene las páginas principales (enviar-mensaje.js, mensajes.js y index.js).
 src/components/: Contiene los componentes reutilizables del frontend como header.js, layout.js y seo.js.
 gatsby-config.js: Configuración de Gatsby y plugins utilizados.
