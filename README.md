@@ -63,7 +63,7 @@ docker-compose ps
 
 Acceder a la Aplicación:
 - Frontend Gatsby: http://localhost:8000
-- Microservicio de Escritura: http://localhost:5001/guardar_xml
+- Microservicio de Escritura: http://localhost:5001/escribir
 - Microservicio de Lectura: http://localhost:5002/obtener_mensajes
 
 Detener y Limpiar los Contenedores:
