@@ -1,21 +1,13 @@
 # Escritor-Lector-MS
-
 Este proyecto es una aplicación completa que incluye un frontend desarrollado en Gatsby y dos microservicios en Flask que interactúan con una base de datos MySQL. El proyecto está completamente Dockerizado para facilitar su despliegue y gestión.
 
 ## Contenido
-
 - [Descripción](#descripción)
 - [Requisitos](#requisitos)
-- [Configuración del Proyecto](#configuración-del-proyecto)
-- [Ejecución del Proyecto con Docker](#ejecución-del-proyecto-con-docker)
-- [Endpoints del Backend](#endpoints-del-backend)
 - [Estructura del Proyecto](#estructura-del-proyecto)
-- [Despliegue](#despliegue)
-- [Contribución](#contribución)
-- [Licencia](#licencia)
+- [Ejecución del Proyecto con Docker](#ejecución-del-proyecto-con-docker)
 
 ## Descripción
-
 El proyecto consta de los siguientes componentes:
 
 1. **Frontend (Gatsby):** Permite a los usuarios enviar mensajes y ver los mensajes almacenados.
@@ -24,9 +16,7 @@ El proyecto consta de los siguientes componentes:
 4. **Base de Datos (MySQL):** Almacena los mensajes en dos tablas: `escritura` y `lectura`.
 
 ## Requisitos
-
 ### Requisitos Generales
-
 - Docker
 - Docker Compose
 
@@ -51,6 +41,7 @@ Escritor-Lector-MS/
 ├── docker-compose.yml
 └── README.md
 ```
+
 ### Ejecución del Proyecto con Docker
 Construir los Contenedores:
 En la raíz del proyecto, ejecuta el siguiente comando para construir todos los contenedores:
@@ -71,9 +62,9 @@ docker-compose ps
 ```
 
 Acceder a la Aplicación:
-Frontend Gatsby: http://localhost:8000
-Microservicio de Escritura: http://localhost:5001/guardar_xml
-Microservicio de Lectura: http://localhost:5002/obtener_mensajes
+- Frontend Gatsby: http://localhost:8000
+- Microservicio de Escritura: http://localhost:5001/guardar_xml
+- Microservicio de Lectura: http://localhost:5002/obtener_mensajes
 
 Detener y Limpiar los Contenedores:
 Para detener y eliminar todos los contenedores, volúmenes y redes creadas:
