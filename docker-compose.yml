@@ -7,8 +7,11 @@ services:
     environment:
       MYSQL_ROOT_PASSWORD: root
       MYSQL_DATABASE: escritura-lectura
+<<<<<<< HEAD
       MYSQL_USER: root
       MYSQL_PASSWORD: root
+=======
+>>>>>>> 9c1b609 (Actualización Docker)
     ports:
       - "3306:3306"
     volumes:
@@ -16,7 +19,11 @@ services:
 
   escritor:
     build:
+<<<<<<< HEAD
       context: ./escritor
+=======
+      context: ./Escritor  # Cambié ./escritor a ./Escritor basado en tu estructura
+>>>>>>> 9c1b609 (Actualización Docker)
       dockerfile: Dockerfile
     container_name: escritor-service
     environment:
@@ -28,21 +35,41 @@ services:
       - "5001:5001"
     depends_on:
       - mysql
+<<<<<<< HEAD
 
   lector:
     build:
       context: ./lector
+=======
+    volumes:
+      - ./Escritor:/app  # Asegura que el archivo escritor.py esté en la carpeta /app dentro del contenedor
+
+  lector:
+    build:
+      context: ./Lector  # Cambié ./lector a ./Lector basado en tu estructura
+>>>>>>> 9c1b609 (Actualización Docker)
       dockerfile: Dockerfile
     container_name: lector-service
     environment:
       DB_HOST: mysql-db
+<<<<<<< HEAD
       DB_USER: user
       DB_PASSWORD: root
       DB_NAME: root
+=======
+      DB_USER: root  # Cambié user a root para que coincida con la configuración de MySQL
+      DB_PASSWORD: root
+      DB_NAME: escritura-lectura
+>>>>>>> 9c1b609 (Actualización Docker)
     ports:
       - "5002:5002"
     depends_on:
       - mysql
+<<<<<<< HEAD
+=======
+    volumes:
+      - ./Lector:/app  # Asegura que el archivo lector.py esté en la carpeta /app dentro del contenedor
+>>>>>>> 9c1b609 (Actualización Docker)
 
   gatsby:
     build:
@@ -57,6 +84,13 @@ services:
     depends_on:
       - escritor
       - lector
+<<<<<<< HEAD
+=======
+    volumes:
+      - ./gatsby-escritor-lector:/app
+    command: npm start  # Asegúrate de que esté el comando correcto para ejecutar el frontend
+
+>>>>>>> 9c1b609 (Actualización Docker)
 
 volumes:
   mysql_data:
