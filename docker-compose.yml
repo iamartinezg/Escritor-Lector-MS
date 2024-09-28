@@ -5,10 +5,10 @@ services:
     image: mysql:5.7
     container_name: mysql-db
     environment:
-      MYSQL_ROOT_PASSWORD: rootpassword
-      MYSQL_DATABASE: escritura_lectura
-      MYSQL_USER: user
-      MYSQL_PASSWORD: userpassword
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: escritura-lectura
+      MYSQL_USER: root
+      MYSQL_PASSWORD: root
     ports:
       - "3306:3306"
     volumes:
@@ -21,9 +21,9 @@ services:
     container_name: escritor-service
     environment:
       DB_HOST: mysql-db
-      DB_USER: user
-      DB_PASSWORD: userpassword
-      DB_NAME: escritura_lectura
+      DB_USER: root
+      DB_PASSWORD: root
+      DB_NAME: escritura-lectura
     ports:
       - "5001:5001"
     depends_on:
@@ -37,8 +37,8 @@ services:
     environment:
       DB_HOST: mysql-db
       DB_USER: user
-      DB_PASSWORD: userpassword
-      DB_NAME: escritura_lectura
+      DB_PASSWORD: root
+      DB_NAME: root
     ports:
       - "5002:5002"
     depends_on:
@@ -50,7 +50,7 @@ services:
       dockerfile: Dockerfile
     container_name: gatsby-frontend
     environment:
-      GATSBY_API_ESCRITURA: http://escritor-service:5001/guardar_xml
+      GATSBY_API_ESCRITURA: http://escritor-service:5001/escribir
       GATSBY_API_LECTURA: http://lector-service:5002/obtener_mensajes
     ports:
       - "8000:8000"

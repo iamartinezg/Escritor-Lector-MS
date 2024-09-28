@@ -1,28 +1,20 @@
-# gatsby-escritor-lector/Dockerfile
+# Construir desde una imagen base de node
 FROM node:18
 
-# Configuración del entorno
+# Crear y configurar el directorio de trabajo
 WORKDIR /app
 
-# Copiar archivos necesarios
+# Copiar los archivos de package.json y package-lock.json
 COPY package*.json ./
-
-# Establecer variables de entorno para deshabilitar sharp
-ENV SKIP_SASS_BINARY_DOWNLOAD_FOR_CI=true
-ENV SKIP_NODE_BINARY_DOWNLOAD_FOR_CI=true
-ENV SKIP_SHARP_DOWNLOAD=true
 
 # Instalar dependencias
 RUN npm install
 
-# Copiar todo el proyecto
+# Copiar todo el contenido del proyecto
 COPY . .
 
-# Construir el proyecto Gatsby
-RUN npm run build
-
-# Exponer el puerto
+# Exponer el puerto en el que gatsby develop se ejecuta (generalmente 8000)
 EXPOSE 8000
 
-# Comando para ejecutar el servidor de Gatsby
-CMD ["npm", "run", "serve"]
+# Ejecutar el servidor de desarrollo de Gatsby
+CMD ["gatsby", "develop", "-H", "0.0.0.0"]
