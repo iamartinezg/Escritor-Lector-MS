@@ -1,31 +1,5 @@
-<<<<<<< HEAD
-# Construir desde una imagen base de node
-FROM node:18
-
-# Crear y configurar el directorio de trabajo
-WORKDIR /app
-
-# Copiar los archivos de package.json y package-lock.json
-COPY package*.json ./
-
-# Instalar dependencias
-RUN npm install
-
-# Copiar todo el contenido del proyecto
-COPY . .
-
-# Exponer el puerto en el que gatsby develop se ejecuta (generalmente 8000)
-EXPOSE 8000
-
-# Ejecutar el servidor de desarrollo de Gatsby
-=======
-# Dockerfile para gatsby-frontend
-
 # Usar una imagen base de Node.js
 FROM node:18
-
-# Instalar Gatsby CLI globalmente
-RUN npm install -g gatsby-cli
 
 # Establecer el directorio de trabajo
 WORKDIR /app
